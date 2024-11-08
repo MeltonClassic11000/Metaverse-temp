@@ -10,11 +10,66 @@
   cursor: pointer;
   user-select: none;
   border-radius: 8px;
-  font-family: "heebo-md", sans-serif;
+  font-family: "heebo-md" sans-serif;
   transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   height: fit-content;
   position: relative;
   overflow: hidden;
   justify-content: center;
+}
+
+.outline-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all .4s ease-in-out;
+  font-family: 'heebo-md';
+  color: white;
+  border-radius: 30px;
+  padding: 8px 24px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    color: black;
+
+    &::before {
+      width: 100%;
+      right: unset;
+      left: 0;
+    }
+
+    &::after{
+      border-color: var(--secondary);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    transform-origin: left;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform-origin: left;
+    background-color: var(--secondary);
+    transition: all .4s ease-in-out;
+    z-index: -1;
+    border-radius: 30px;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 3px solid #00d8ff;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: all .4s ease-in-out;
+  }
 }
