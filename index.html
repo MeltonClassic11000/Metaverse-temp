@@ -51,20 +51,56 @@
         </div>
     </header>
     <div class="main">
-        <section class="hero pb-0">
+        <section class="hero">
             <div class="container">
-                <div class="card-big">
-                    <div style="max-width: 620px;" class="content">
-                        <h1>Your AI-Powered <span class="text-primary">Design</span> Assistant</h1>
-                        <p>Unlock your creative potential. Seamlessly generate, customize, and perfect your designs with
-                            cutting-edge AI technology.</p>
-                        <div class="d-flex flex-wrap">
-                            <a href="#" class="btn btn-primary">Get Started</a>
-                            <a href="https://webflow.com/templates/designers/mejed-alkoutaini" class="d-block btn"
-                                target="_blank">More
-                                Templates</a>
+                <div class="row gx-lg-5 gy-md-5">
+                    <div class="col-lg-6">
+                        <h1 class="main-title">cyberBrokers collection</h1>
+                        <div class="text-container" id="textContainer">
+                            <div class="word-container">
+                                <!-- Each letter in its own span for the word "Hello" -->
+                                <span class="letter">H</span>
+                                <span class="letter">e</span>
+                                <span class="letter">l</span>
+                                <span class="letter">l</span>
+                                <span class="letter">o</span>
+                            </div>
+                            <div class="word-container">
+                                <span class="letter">W</span>
+                                <span class="letter">o</span>
+                                <span class="letter">r</span>
+                                <span class="letter">l</span>
+                                <span class="letter">d</span>
+                            </div>
+                            <div class="word-container">
+                                <span class="letter">f</span>
+                                <span class="letter">r</span>
+                                <span class="letter">o</span>
+                                <span class="letter">m</span>
+                            </div>
+                            <div class="word-container">
+                                <span class="letter">C</span>
+                                <span class="letter">S</span>
+                                <span class="letter">S</span>
+                            </div>
+                            <div class="word-container">
+                                <span class="letter">A</span>
+                                <span class="letter">n</span>
+                                <span class="letter">i</span>
+                                <span class="letter">m</span>
+                                <span class="letter">a</span>
+                                <span class="letter">t</span>
+                                <span class="letter">i</span>
+                                <span class="letter">o</span>
+                                <span class="letter">n</span>
+                                <span class="letter">s</span>
+                                <span class="letter">!</span>
+                            </div>
                         </div>
+
+
                     </div>
+                    <div class="col-lg-6"></div>
                 </div>
             </div>
         </section>
@@ -389,8 +425,20 @@
         });
 
 
+        // JavaScript to handle timing for each letter's animation
+        const letters = document.querySelectorAll(".letter");
+        letters.forEach((letter, index) => {
+            letter.style.animationDelay = `${index * 0.1}s`;
+        });
 
-       
+        // Reset to normal after all animations
+        setTimeout(() => {
+            document.getElementById("textContainer").classList.add("end");
+        }, letters.length * 100); // Adjust timing based on letter count and delay
+
+
+
+
 
 
 

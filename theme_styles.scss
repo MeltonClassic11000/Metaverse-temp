@@ -17,11 +17,6 @@
   }
 }
 
-
-.capitalize{
-  text-transform: capitalize;
-}
-
 .line {
   position: relative;
 
@@ -235,7 +230,7 @@
 .main-title {
   position: relative;
   z-index: 1;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .input-wrapper {
