@@ -1,58 +1,43 @@
 .main {
     .hero {
-        .word-container {
+        .fn_animated_text {
+            margin: 0;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.8);
             display: flex;
-            gap: 10px;
+            flex-wrap: wrap;
         }
-
-        .letter {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: normal;
+        
+        .fn_animated_text .letter {
+            color: red;
             opacity: 0;
-            color: var(--secondary, #3498db);
-            /* Fallback color */
-            animation: appear 0.5s ease forwards, colorChange 1s ease-in-out forwards, scaleUp 0.7s ease-out forwards;
+            transform: translate(-300px, 0) scale(0);
+            display: inline-block;
+            animation: FrenifyLetterAnimation 0.5s forwards;
+            animation-delay: calc(0.05s * var(--i));
         }
-
-        /* Keyframes for each effect */
-        @keyframes appear {
-            0% {
-                opacity: 0;
-                transform: translateY(-10px);
+        
+        /* Animation keyframes */
+        @keyframes FrenifyLetterAnimation {
+            60% {
+                transform: translate(20px, 0) scale(1);
+                color: yellow;
             }
-
+            80% {
+                transform: translate(20px, 0) scale(1);
+                color: yellow;
+            }
+            99% {
+                transform: translate(0) scale(1.2);
+                color: yellow;
+            }
             100% {
+                transform: translate(0) scale(1);
                 opacity: 1;
-                transform: translateY(0);
+                color: yellow;
             }
         }
-
-        @keyframes colorChange {
-            0% {
-                color: var(--secondary, #3498db);
-            }
-
-            100% {
-                color: var(--gray, #666);
-            }
-        }
-
-        @keyframes scaleUp {
-            0% {
-                transform: scale(2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Reset styles after animation */
-        .text-container.end .letter {
-            color: black;
-            transform: scale(1);
-        }
+        
     }
 
     .slide-images {
