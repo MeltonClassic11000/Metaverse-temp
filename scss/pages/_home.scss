@@ -21,20 +21,20 @@
         @keyframes FrenifyLetterAnimation {
             60% {
                 transform: translate(20px, 0) scale(1);
-                color: yellow;
+                color: var(--secondary);
             }
             80% {
                 transform: translate(20px, 0) scale(1);
-                color: yellow;
+                color: var(--secondary);
             }
             99% {
                 transform: translate(0) scale(1.2);
-                color: yellow;
+                color: var(--secondary);
             }
             100% {
                 transform: translate(0) scale(1);
                 opacity: 1;
-                color: yellow;
+                color: var(--secondary);
             }
         }
         

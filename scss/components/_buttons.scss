@@ -1,58 +1,122 @@
-.mint-button {
-  padding: 5px;
+.btn {
   border: 1px solid var(--secondary);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
   position: relative;
   margin-top: 20px;
-  display: block;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background-color: var(--secondary);
+  &:hover {
+
+    .span1,
+    .span2 {
+      opacity: 0;
+    }
+
+    .btn-mint,
+    .btn-mint1 {
+      &::before {
+        width: 100%;
+        right: unset;
+        left: 0;
+      }
+
+    }
   }
 
-  &::before {
-    left: 0;
-    top: 0;
-  }
+  span {
+    transition: all .4s ease-in-out;
 
-  &::after {
-    right: 0;
-    top: 0;
-  }
+    &.span1 {
+      &::before {
+        left: 0;
+        top: 0;
+      }
 
-  .btn {
-    border: 1px solid var(--secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 45px;
-    background-color: var(--secondary);
-    color: black;
-    font-family: 'heebo-md';
+      &::after {
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &.span2 {
+      &::before {
+        left: 0;
+        bottom: 0;
+      }
+
+      &::after {
+        right: 0;
+        bottom: 0;
+      }
+    }
 
     &::before,
     &::after {
       content: '';
       position: absolute;
+      background-color: var(--secondary);
       width: 3px;
       height: 3px;
-      background-color: var(--secondary);
+
     }
+  }
+
+  .btn-mint {
+    width: 160px;
+    height: 40px;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'heebo-md';
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 
     &::before {
-      left: 0;
-      bottom: 0;
-    }
-
-    &::after {
+      content: '';
+      position: absolute;
+      transform-origin: left;
       right: 0;
-      bottom: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      transform-origin: left;
+      background-color: white;
+      transition: all .4s ease-in-out;
+      z-index: -1;
+    }
+  }
+
+  .btn-mint1 {
+    width: 160px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'heebo-md';
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      transform-origin: left;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      transform-origin: left;
+      background-color: var(--secondary);
+      transition: all .4s ease-in-out;
+      z-index: -1;
     }
   }
 }
