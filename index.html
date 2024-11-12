@@ -463,36 +463,9 @@
         </section>
     </div>
 
-
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.querySelector('.menu1');
-
-        hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('active');
-            menu.classList.toggle('active');
-        });
-
-
-        // JavaScript to handle timing for each letter's animation
-        const letters = document.querySelectorAll(".letter");
-        letters.forEach((letter, index) => {
-            letter.style.animationDelay = `${index * 0.1}s`;
-        });
-
-        // Reset to normal after all animations
-        setTimeout(() => {
-            document.getElementById("textContainer").classList.add("end");
-        }, letters.length * 100); // Adjust timing based on letter count and delay
-
-
-
-
-
-
-
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+   
 
 
 </body>
