@@ -7,7 +7,7 @@
             display: flex;
             flex-wrap: wrap;
         }
-        
+
         .fn_animated_text .letter {
             color: red;
             opacity: 0;
@@ -16,28 +16,35 @@
             animation: FrenifyLetterAnimation 0.5s forwards;
             animation-delay: calc(0.05s * var(--i));
         }
-        
+
+        .counter-section {
+            font-size: 3em;
+        }
+
         /* Animation keyframes */
         @keyframes FrenifyLetterAnimation {
             60% {
                 transform: translate(20px, 0) scale(1);
                 color: var(--secondary);
             }
+
             80% {
                 transform: translate(20px, 0) scale(1);
                 color: var(--secondary);
             }
+
             99% {
                 transform: translate(0) scale(1.2);
                 color: var(--secondary);
             }
+
             100% {
                 transform: translate(0) scale(1);
                 opacity: 1;
                 color: var(--secondary);
             }
         }
-        
+
     }
 
     .slide-images {
