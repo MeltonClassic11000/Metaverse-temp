@@ -18,10 +18,11 @@
         }
 
         .counter-section {
-            font-size: 3em;
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--secondary);
         }
 
-        /* Animation keyframes */
         @keyframes FrenifyLetterAnimation {
             60% {
                 transform: translate(20px, 0) scale(1);
